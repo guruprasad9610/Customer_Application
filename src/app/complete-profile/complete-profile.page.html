@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <h1 class="text-center" id="heading"> User Profile </h1>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="container form-group">
+    <ion-input label="Enter Full Name (Required)*" [(ngModel)]="userProfile.name" name="name"
+    label-placement="floating" color="success" fill="outline" required></ion-input>
+      <br>
+    <ion-input label="Enter E-mail Address (Required)*" [(ngModel)]="userProfile.email" name="email"
+    label-placement="floating" color="success" fill="outline" type="email" placeholder="test@email.com" required></ion-input>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button color="success" expand="block" style="margin: 20px;" id="open-toast" (click)="saveData()"> Continue </ion-button>
+  <ion-toast position="top" color="primary" trigger="open-toast" message="Profile details saved successfully."
+  [duration]="3000" icon="checkmark-circle"></ion-toast>
+</ion-footer>

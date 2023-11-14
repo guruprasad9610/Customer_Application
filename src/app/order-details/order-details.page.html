@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="light"> Order Details </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">orderDetails</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Order Status</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-progress-bar [buffer]="buffer" [value]="progress" style="margin-bottom: 10px;"></ion-progress-bar>
+        <ion-text color="primary">Status : Out for Pickup</ion-text>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+
+      <ion-card-header>
+        <ion-card-title>Order ID : 1234567890 </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-card-subtitle>Pickup Date: <b> 20/08/2023 </b> </ion-card-subtitle>
+        <ion-card-subtitle>Pickup Time: <b> 10:30 AM </b> </ion-card-subtitle> <br>
+
+        <ion-card-title> List of items </ion-card-title>
+
+          <ion-item>
+            <table class="table table-striped-columns">
+              <thead>
+                <tr>
+                  <th scope="col"> Sl </th>
+                  <th scope="col"> Item </th>
+                  <th scope="col"> Quantity </th>
+                  <th scope="col"> Price </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Paper</td>
+                  <td>4 kg</td>
+                  <td>₹ 40/-</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Iron</td>
+                  <td>10 kg</td>
+                  <td>₹ 400/-</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Plastic</td>
+                  <td>5 kg</td>
+                  <td>₹ 100/-</td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="3"> Total Amount : </th>
+                  <td>₹ 540/-</td>
+                </tr>
+              </tbody>
+            </table>
+          </ion-item>
+
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
